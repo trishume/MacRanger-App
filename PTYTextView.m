@@ -3193,7 +3193,7 @@ static double EuclideanDistance(NSPoint p1, NSPoint p2) {
 
 
     if (mouseDownOnImage &&
-        ([event modifierFlags] & NSCommandKeyMask) &&
+ //       ([event modifierFlags] & NSCommandKeyMask) &&
         dragThresholdMet) {
         [self _dragImage:theImage forEvent:event];
     } else if (mouseDownOnSelection == YES &&

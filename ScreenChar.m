@@ -81,7 +81,7 @@ static BOOL hasWrapped = NO;
         [canvas setSize:region];
         [canvas lockFocus];
         [_image drawInRect:NSMakeRect((region.width - size.width) / 2,
-                                      (region.height - size.height) / 2,
+                                      region.height - size.height,
                                       size.width,
                                       size.height)];
         [canvas unlockFocus];
