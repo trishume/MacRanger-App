@@ -8006,6 +8006,10 @@ static double EuclideanDistance(NSPoint p1, NSPoint p2) {
 
 }
 
+- (NSDragOperation)draggingSession:(NSDraggingSession *)session sourceOperationMaskForDraggingContext:(NSDraggingContext)context {
+    return NSDragOperationMove;
+}
+
 - (void)_dragImage:(ImageInfo *)imageInfo forEvent:(NSEvent *)theEvent
 {
     NSSize region = NSMakeSize(charWidth * imageInfo.size.width,
@@ -8014,8 +8018,10 @@ static double EuclideanDistance(NSPoint p1, NSPoint p2) {
 
     // get the pasteboard
     NSPasteboard *pboard = [NSPasteboard pasteboardWithName:NSDragPboard];
-    [pboard declareTypes:[NSArray arrayWithObject:NSTIFFPboardType] owner:self];
+    [pboard declareTypes:@[NSFilenamesPboardType, NSTIFFPboardType] owner:self];
     NSBitmapImageRep *rep = [[imageInfo.image representations] objectAtIndex:0];
+    NSURL *fileURL = [NSURL fileURLWithPath:imageInfo.filename];
+    [pboard writeObjects:@[fileURL]];
     NSData *tiff = [rep representationUsingType:NSTIFFFileType properties:nil];
     [pboard setData:tiff forType:NSTIFFPboardType];
 
