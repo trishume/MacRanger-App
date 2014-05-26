@@ -591,6 +591,8 @@
 		5ECE4AE814513F05002A9CC2 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5ECE4AC41451343E002A9CC2 /* Growl.framework */; };
 		5ECE4AEA14514058002A9CC2 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 5ECE4AE914514058002A9CC2 /* Growl Registration Ticket.growlRegDict */; };
 		6A0C83651930F04B00373EDA /* MacRanger.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6A0C83641930F04B00373EDA /* MacRanger.icns */; };
+		6AE9158A1933DE25002E0E67 /* NSImage+QuickLook.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE915891933DE25002E0E67 /* NSImage+QuickLook.h */; };
+		6AE9158C1933DE2D002E0E67 /* NSImage+QuickLook.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9158B1933DE2D002E0E67 /* NSImage+QuickLook.m */; };
 		874206490564169600CFC3F1 /* iTermApplicationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 20D5CC6304E7AA0500000106 /* iTermApplicationDelegate.h */; };
 		8742064D0564169600CFC3F1 /* iTerm.icns in Resources */ = {isa = PBXBuildFile; fileRef = E8EDCE69015E0A5703000001 /* iTerm.icns */; };
 		8742064F0564169600CFC3F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CF757F026DDAD703A80106 /* main.m */; };
@@ -1317,6 +1319,8 @@
 		5ECE4AC41451343E002A9CC2 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		5ECE4AE914514058002A9CC2 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		6A0C83641930F04B00373EDA /* MacRanger.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MacRanger.icns; sourceTree = "<group>"; };
+		6AE915891933DE25002E0E67 /* NSImage+QuickLook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+QuickLook.h"; sourceTree = "<group>"; };
+		6AE9158B1933DE2D002E0E67 /* NSImage+QuickLook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+QuickLook.m"; sourceTree = "<group>"; };
 		8742065A0564169600CFC3F1 /* iTerm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTerm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8786A96E052CEC220073D10E /* script.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = script.png; path = images/script.png; sourceTree = "<group>"; };
 		90A1E139186F9EA4003EC3E8 /* AppleScriptTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleScriptTest.h; sourceTree = "<group>"; };
@@ -2008,6 +2012,8 @@
 		1D03D42519144B8E0049EB8F /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				6AE915891933DE25002E0E67 /* NSImage+QuickLook.h */,
+				6AE9158B1933DE2D002E0E67 /* NSImage+QuickLook.m */,
 				1DFA7C621923E77900DF1410 /* SSKeychain */,
 				1D13EADB12113A2D00909F9C /* libncurses.dylib */,
 				F6441F610E748404000EC682 /* CGSInternal */,
@@ -2808,6 +2814,7 @@
 				A6E7138E18F26A91008D94DD /* AppearancePreferencesViewController.h in Headers */,
 				A6E74761188C679C005355CF /* iTermExposeView.h in Headers */,
 				1D7C18811275D22900461E55 /* PasteboardHistory.h in Headers */,
+				6AE9158A1933DE25002E0E67 /* NSImage+QuickLook.h in Headers */,
 				1D7C1D1212772ECC00461E55 /* NSDateFormatterExtras.h in Headers */,
 				1DE214E1128212EE004E3ADF /* Autocomplete.h in Headers */,
 				A6E713AD18F7CF73008D94DD /* ProfilesGeneralPreferencesViewController.h in Headers */,
@@ -3729,6 +3736,7 @@
 				1D6944D8169E96AC00C7048A /* ThreeFingerTapGestureRecognizer.m in Sources */,
 				A68A30E6186D1429007F550F /* VT100RemoteHost.m in Sources */,
 				1D085F8716F02E7400B7FCE9 /* PasteContext.m in Sources */,
+				6AE9158C1933DE2D002E0E67 /* NSImage+QuickLook.m in Sources */,
 				1D085F8E16F0328B00B7FCE9 /* PasteViewController.m in Sources */,
 				1D085F9316F03E5400B7FCE9 /* PasteView.m in Sources */,
 				1D085F9716F04D0900B7FCE9 /* NSBezierPath+iTerm.m in Sources */,

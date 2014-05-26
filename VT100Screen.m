@@ -5,6 +5,7 @@
 #import "IntervalTree.h"
 #import "NSArray+iTerm.h"
 #import "NSColor+iTerm.h"
+#import "NSImage+QuickLook.h"
 #import "PTYNoteViewController.h"
 #import "PTYTextView.h"
 #import "RegexKitLite.h"
@@ -32,6 +33,8 @@ static const int kDefaultScreenColumns = 80;
 static const int kDefaultScreenRows = 25;
 static const int kDefaultMaxScrollbackLines = 1000;
 static const int kDefaultTabstopWidth = 8;
+
+static const int kQuicklookPreviewResolutionX = 6;
 
 NSString * const kHighlightForegroundColor = @"kHighlightForegroundColor";
 NSString * const kHighlightBackgroundColor = @"kHighlightBackgroundColor";
@@ -3019,7 +3022,15 @@ static NSString *const kInlineFileBase64String = @"base64 string";  // NSMutable
 
 - (void)terminalDidFinishReceivingFile {
     if (inlineFileInfo_) {
-        NSImage *image = [self imageWithBase64EncodedString:inlineFileInfo_[kInlineFileBase64String]];
+        NSImage *image;
+        if([inlineFileInfo_[kInlineFileBase64String] length] < 5) {
+            NSUInteger pxWidth = [inlineFileInfo_[kInlineFileWidth] intValue]*kQuicklookPreviewResolutionX;
+            NSSize size = NSMakeSize(pxWidth, pxWidth);
+            image = [NSImage imageWithPreviewOfFileAtPath:inlineFileInfo_[kInlineFileName] ofSize:size asIcon:YES];
+        } else {
+            image = [self imageWithBase64EncodedString:inlineFileInfo_[kInlineFileBase64String]];
+        }
+        
         [self appendInlineFileCharsForName:inlineFileInfo_[kInlineFileName]
                                      width:[inlineFileInfo_[kInlineFileWidth] intValue]
                                      units:(VT100TerminalUnits)[inlineFileInfo_[kInlineFileWidthUnits] intValue]
@@ -3847,7 +3858,6 @@ static void SwapInt(int *a, int *b) {
     NSImage *image = [[[NSImage alloc] initWithData:data] autorelease];
     return image;
 }
-
 
 #pragma mark - PTYNoteViewControllerDelegate
 
