@@ -2908,8 +2908,10 @@ NSMutableArray* screens=0;
             }
         }
     }
+    
+    theImage = [self imageInfoAtCoord:VT100GridCoordMake(x, y)];
 
-    if ([self reportMouseEvent:event]) {
+    if (!theImage && [self reportMouseEvent:event]) {
         return NO;
     }
 
@@ -2946,7 +2948,7 @@ NSMutableArray* screens=0;
             mode = kiTermSelectionModeCharacter;
         }
 
-        if ((theImage = [self imageInfoAtCoord:VT100GridCoordMake(x, y)])) {
+        if (theImage) {
             mouseDownOnImage = YES;
         } else if ([_selection containsCoord:VT100GridCoordMake(x, y)]) {
             // not holding down shift key but there is an existing selection.
