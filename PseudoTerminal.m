@@ -1313,6 +1313,13 @@ NSString *kSessionsKVCKey = @"sessions";
         // title can be nil during loadWindowArrangement
         title = @"";
     }
+    
+    NSArray *parts = [title componentsSeparatedByString:@"^^"];
+    title = parts[0];
+    if([parts count] > 1) {
+        NSString *iconPath = parts[1];
+        [[self window] setRepresentedFilename:iconPath];
+    }
 
     if ([iTermPreferences boolForKey:kPreferenceKeyShowWindowNumber]) {
         NSString *tmuxId = @"";
@@ -2690,13 +2697,13 @@ NSString *kSessionsKVCKey = @"sessions";
         }
     }
 
-    PTYSession* session = [self currentSession];
-    NSString *aTitle = [NSString stringWithFormat:@"%@ (%d,%d)",
-                        [self currentSessionName],
-                        [session columns],
-                        [session rows]];
-    tempTitle = YES;
-    [self setWindowTitle:aTitle];
+//    PTYSession* session = [self currentSession];
+//    NSString *aTitle = [NSString stringWithFormat:@"%@ (%d,%d)",
+//                        [self currentSessionName],
+//                        [session columns],
+//                        [session rows]];
+//    tempTitle = YES;
+//    [self setWindowTitle:aTitle];
     [self fitTabsToWindow];
 
     // Post a notification
