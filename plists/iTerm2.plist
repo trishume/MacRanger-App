@@ -63,7 +63,7 @@
 	<key>CFBundleHelpBookName</key>
 	<string>iTerm2 Help</string>
 	<key>CFBundleIconFile</key>
-	<string>iTerm2</string>
+	<string>MacRanger</string>
 	<key>CFBundleIdentifier</key>
 	<string>ca.thume.MacRanger</string>
 	<key>CFBundleInfoDictionaryVersion</key>
