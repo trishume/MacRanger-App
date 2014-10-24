@@ -1244,9 +1244,9 @@
 		5ECE00601454E59B004861E9 /* PseudoTerminalRestorer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECE005E1454E59B004861E9 /* PseudoTerminalRestorer.m */; };
 		5ECE4AE814513F05002A9CC2 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5ECE4AC41451343E002A9CC2 /* Growl.framework */; };
 		5ECE4AEA14514058002A9CC2 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 5ECE4AE914514058002A9CC2 /* Growl Registration Ticket.growlRegDict */; };
-		6A0C83651930F04B00373EDA /* MacRanger.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6A0C83641930F04B00373EDA /* MacRanger.icns */; };
-		6AE9158A1933DE25002E0E67 /* NSImage+QuickLook.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE915891933DE25002E0E67 /* NSImage+QuickLook.h */; };
-		6AE9158C1933DE2D002E0E67 /* NSImage+QuickLook.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9158B1933DE2D002E0E67 /* NSImage+QuickLook.m */; };
+		6A90A50719FAE08300581D06 /* MacRanger.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6A90A50619FAE08300581D06 /* MacRanger.icns */; };
+		6A90A50919FAE0BC00581D06 /* NSImage+QuickLook.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A90A50819FAE0BC00581D06 /* NSImage+QuickLook.m */; };
+		6A90A50B19FAE0CB00581D06 /* NSImage+QuickLook.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A90A50A19FAE0CB00581D06 /* NSImage+QuickLook.h */; };
 		874206490564169600CFC3F1 /* iTermApplicationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 20D5CC6304E7AA0500000106 /* iTermApplicationDelegate.h */; };
 		8742064F0564169600CFC3F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CF757F026DDAD703A80106 /* main.m */; };
 		874206500564169600CFC3F1 /* iTermApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D5CC6404E7AA0500000106 /* iTermApplicationDelegate.m */; };
@@ -2131,6 +2131,9 @@
 		5ECE005E1454E59B004861E9 /* PseudoTerminalRestorer.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = PseudoTerminalRestorer.m; sourceTree = "<group>"; tabWidth = 4; };
 		5ECE4AC41451343E002A9CC2 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		5ECE4AE914514058002A9CC2 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
+		6A90A50619FAE08300581D06 /* MacRanger.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = MacRanger.icns; path = images/MacRanger.icns; sourceTree = "<group>"; };
+		6A90A50819FAE0BC00581D06 /* NSImage+QuickLook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+QuickLook.m"; sourceTree = "<group>"; };
+		6A90A50A19FAE0CB00581D06 /* NSImage+QuickLook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+QuickLook.h"; sourceTree = "<group>"; };
 		8742065A0564169600CFC3F1 /* iTerm2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTerm2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8786A96E052CEC220073D10E /* script.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = script.png; path = images/script.png; sourceTree = "<group>"; };
 		90A1E139186F9EA4003EC3E8 /* AppleScriptTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleScriptTest.h; sourceTree = "<group>"; };
@@ -2597,6 +2600,7 @@
 		0464AB15006CD2EC7F000001 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				6A90A50A19FAE0CB00581D06 /* NSImage+QuickLook.h */,
 				A6E713B018FCB559008D94DD /* AdvancedWorkingDirectoryWindowController.h */,
 				1D9DCC14142D7FC10016228A /* AlertTrigger.h */,
 				A6E7138C18F26A91008D94DD /* AppearancePreferencesViewController.h */,
@@ -2985,6 +2989,7 @@
 		1D093C131217412B0029F9AD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6A90A50619FAE08300581D06 /* MacRanger.icns */,
 				A663010619CFCE74004AF81C /* SuppressAllOutput.png */,
 				A663010719CFCE74004AF81C /* SuppressAllOutput@2x.png */,
 				1DEDF56719C917FD005B023A /* new-tab.png */,
@@ -3258,6 +3263,7 @@
 		1D9DDE31142E73E300275650 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				6A90A50819FAE0BC00581D06 /* NSImage+QuickLook.m */,
 				A6C7DE5C19A469D6001E5C75 /* NSColor+Scripting.m */,
 				1D9F6AB7140C9DC4009B5CD4 /* FutureMethods.m */,
 				A68A30CD186D1414007F550F /* NSArray+iTerm.m */,
@@ -4080,7 +4086,6 @@
 				A6E7138E18F26A91008D94DD /* AppearancePreferencesViewController.h in Headers */,
 				A6E74761188C679C005355CF /* iTermExposeView.h in Headers */,
 				1D7C18811275D22900461E55 /* PasteboardHistory.h in Headers */,
-				6AE9158A1933DE25002E0E67 /* NSImage+QuickLook.h in Headers */,
 				1D7C1D1212772ECC00461E55 /* NSDateFormatterExtras.h in Headers */,
 				1DE214E1128212EE004E3ADF /* Autocomplete.h in Headers */,
 				A6E713AD18F7CF73008D94DD /* ProfilesGeneralPreferencesViewController.h in Headers */,
@@ -4256,6 +4261,7 @@
 				A6057C09187A1809004A60AF /* TerminalFile.h in Headers */,
 				A63BA39F18B27B92002BE075 /* iTermTextExtractor.h in Headers */,
 				1D70BA351680158700824B72 /* PTYFontInfo.h in Headers */,
+				6A90A50B19FAE0CB00581D06 /* NSImage+QuickLook.h in Headers */,
 				1D6944D7169E96AC00C7048A /* ThreeFingerTapGestureRecognizer.h in Headers */,
 				1D085F8616F02E7400B7FCE9 /* PasteContext.h in Headers */,
 				1D085F8D16F0328B00B7FCE9 /* PasteViewController.h in Headers */,
@@ -4559,6 +4565,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DFA9D6718F37160008ADC98 /* English.lproj/iTermEditKeyActionWindowController.xib in Resources */,
+				6A90A50719FAE08300581D06 /* MacRanger.icns in Resources */,
 				1D5FDD7C1208E91100C46BA3 /* close.png in Resources */,
 				1D5FDD7D1208E91100C46BA3 /* config.png in Resources */,
 				1DFA9D6C18F37AA5008ADC98 /* iTermKeyMapping.xib in Resources */,
@@ -5391,6 +5398,7 @@
 				1D44218D1290B34500891504 /* TextViewWrapper.m in Sources */,
 				1D2E802F129DA45A00F3D71E /* PTYTab.m in Sources */,
 				1D5655CA19AD2B1A001C460B /* PTYTab+Scripting.m in Sources */,
+				6A90A50919FAE0BC00581D06 /* NSImage+QuickLook.m in Sources */,
 				A6A13AA818C2D45900B241ED /* NSColor+iTerm.m in Sources */,
 				A6A13AB718C33FC500B241ED /* VT100Parser.m in Sources */,
 				1D2E813212A18F7500F3D71E /* SessionView.m in Sources */,
@@ -5519,7 +5527,6 @@
 				1D6944D8169E96AC00C7048A /* ThreeFingerTapGestureRecognizer.m in Sources */,
 				A68A30E6186D1429007F550F /* VT100RemoteHost.m in Sources */,
 				1D085F8716F02E7400B7FCE9 /* PasteContext.m in Sources */,
-				6AE9158C1933DE2D002E0E67 /* NSImage+QuickLook.m in Sources */,
 				1D085F8E16F0328B00B7FCE9 /* PasteViewController.m in Sources */,
 				1D085F9316F03E5400B7FCE9 /* PasteView.m in Sources */,
 				1D8CDF531958F31700FE1BEE /* iTermSizeRememberingView.m in Sources */,
