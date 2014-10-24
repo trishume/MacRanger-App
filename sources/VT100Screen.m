@@ -1683,7 +1683,9 @@ static NSString *const kInlineFileBase64String = @"base64 string";  // NSMutable
 }
 
 - (VT100RemoteHost *)remoteHostOnLine:(int)line {
-    return (VT100RemoteHost *)[self objectOnOrBeforeLine:line ofClass:[VT100RemoteHost class]];
+    // This function was taking 90% of the time and lagging everything, and I don't even use this feature
+    // return (VT100RemoteHost *)[self objectOnOrBeforeLine:line ofClass:[VT100RemoteHost class]];
+    return nil;
 }
 
 - (SCPPath *)scpPathForFile:(NSString *)filename onLine:(int)line {
